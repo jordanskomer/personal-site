@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="/C:/Users/Jordan%20Skomer/git/personal-site/public_html/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8">
-    <title>Coming Soon</title>
+    <title>Hello</title>
 </head>
 <body>
-    <div class="text">
-        Lorem ipsum dolor.
+    <header>
+        <div class="header-wrapper">
+            <button class="button-reset header-button left" onclick="animatePage(0)">ABOUT</button>
+            <button class="button-reset header-button left" onclick="animatePage(0)">RESUME</button>
+            <img class="header-logo" data-id="home" onclick="animatePage(1)" src="../res/logo.svg">
+            <button class="button-reset header-button right" onclick="animatePage(2)">BLOG</button>
+            <button class="button-reset header-button right" onclick="animatePage(2)">PORTFOLIO</button>
+        </div>
+        <img class="header-nav" id="jHeaderNav" onclick="revealSideNav()" src="../res/menu.svg">
+        <div class="nav-wrapper">
+        <ul class="nav-bar" id="jNavBar">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">Portfolio</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item"><a href="#">Blog</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+        </div>
+    </header>
+        <div id="jHome" class="home page current">
+                <button class="button-reset home-button">ABOUT ME</button>
+        </div>
+
+
+        <div id="jAbout" class="about page">
+
+        </div>
+        <div id="jProjects" class="projects page">
+
+        </div>
     </div>
 </body>
+
+<script type="text/javascript">
+    var wordCount = 0;
+    var words = ["Functional", "Simple", "Creative", "Unique", "Beautiful"]
+
+    function revealSideNav() {
+        var navBar = document.getElementById("jNavBar");
+        if(navBar.style.left == "100%" || navBar.style.left == ""){
+            navBar.style.left = "80%";
+            document.getElementById("jHeaderNav").style.left = "70%";
+        } else {
+            navBar.style.left = "100%";
+            document.getElementById("jHeaderNav").style.left = "90%";
+        }
+    }
+    setInterval(function(){
+        // document.getElementById("jHomeText").className += "anim-text-fadeout";
+        // setTimeout(function(){
+        //     document.getElementById("jHomeText").innerHTML = words[wordCount];
+        //     if(wordCount < 5){
+        //         wordCount++;
+        //     } else {
+        //         wordCount = 0;
+        //     }
+        // }, 1000);
+    }, 7500);
+
+    function animatePage(data){
+        switch(data){
+            case 0:
+                document.getElementsByClassName("current").className += 'moveToBottom';
+                document.getElementById("jAbout").className += "moveFromTop current";
+                break;
+            case 1:
+                document.getElementsByClassName("current").className += 'moveToBottom';
+                document.getElementById("jHome").className += "moveFromTop current";
+                break;
+            case 2:
+                document.getElementsByClassName("current").className += 'moveToBottom';
+                document.getElementById("jProjects").className += "moveFromTop current";
+                break;
+        }
+    }
+    window.onscroll = function(){slideInDiv()};
+    function slideInDiv() {
+        document.getElementById("jText").innerHTML = "Int" + document.body.scrollTop;
+        // if(document.body.scrollTop || document.documentElement.scrollTop > 5000){
+        //     document.getElementById("jHome").className = "test";
+        // } else {
+        //     document.getElementById("jHome").className = "home";
+        // }
+    }
+</script>
 </html>

@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+/* line 5, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../sass/header.scss */
+.button-reset {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, ../sass/header.scss */
+.button-reset:hover, .button-reset:focus {
+  outline: none;
+}
+
+/* line 17, ../sass/header.scss */
+header {
+  position: fixed;
+  height: 75px;
+  width: 100%;
+  z-index: 999;
+}
+
+/* line 23, ../sass/header.scss */
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+/* line 31, ../sass/header.scss */
+.nav-bar {
+  list-style: none;
+  background: rgba(51, 51, 51, 0.8);
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  text-align: right;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+/* line 45, ../sass/header.scss */
+.nav-bar {
+  padding-top: 15px;
+}
+
+/* line 48, ../sass/header.scss */
+.nav-item {
+  margin: 15px;
+}
+
+/* line 51, ../sass/header.scss */
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 100%;
+  border-bottom: 2px solid transparent;
+}
+
+/* line 58, ../sass/header.scss */
+.nav-item a:hover {
+  border-bottom: 2px solid white;
+  -webkit-transition: border-bottom 0.5s ease;
+  -moz-transition: border-bottom 0.5s ease;
+  -ms-transition: border-bottom 0.5s ease;
+  -o-transition: border-bottom 0.5s ease;
+  transition: border-bottom 0.5s ease;
+}
+
+/* line 62, ../sass/header.scss */
+.header-logo {
+  cursor: pointer;
+  margin-right: 0;
+  height: 55px;
+  -webkit-transition: margin-right .8s ease, height .5s ease .25s;
+  -moz-transition: margin-right .8s ease, height .5s ease .25s;
+  -ms-transition: margin-right .8s ease, height .5s ease .25s;
+  -o-transition: margin-right .8s ease, height .5s ease .25s;
+  transition: margin-right .8s ease , height .5s ease .25s;
+}
+
+/* line 72, ../sass/header.scss */
+.header-button {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 100%;
+  padding: 10px 0 10px 0;
+  border-bottom: 5px solid transparent;
+  opacity: 1;
+  -webkit-transition: opacity .5s ease, border-bottom .5s ease;
+  -moz-transition: opacity .5s ease, border-bottom .5s ease;
+  -ms-transition: opacity .5s ease, border-bottom .5s ease;
+  -o-transition: opacity .5s ease, border-bottom .5s ease;
+  transition: opacity .5s ease, border-bottom .5s ease;
+}
+
+/* line 86, ../sass/header.scss */
+.header-nav {
+  cursor: pointer;
+  position: absolute;
+  left: 90%;
+  top: 30px;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1s ease .5s, left .5s ease;
+}
+
+/* line 98, ../sass/header.scss */
+.header-button:hover {
+  cursor: pointer;
+  border-bottom: 5px solid white;
+}
+
+/* line 102, ../sass/header.scss */
+.left {
+  margin-right: 75px;
+}
+
+/* line 105, ../sass/header.scss */
+.right {
+  margin-left: 75px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  /* line 111, ../sass/header.scss */
+  .header-logo {
+    margin-right: 80%;
+    height: 50%;
+  }
+
+  /* line 115, ../sass/header.scss */
+  .header-button {
+    opacity: 0;
+  }
+
+  /* line 118, ../sass/header.scss */
+  .header-nav {
+    opacity: 1;
+  }
+}
